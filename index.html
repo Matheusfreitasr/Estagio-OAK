@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header id="header">
+    <img src="src/OAK.jpg" alt="Cabeçalho com imagem OAK" id="header-image">
+</header>
+
+<body>
+    <!-- Seção do formulário -->
+    <section id="form-section">
+        <h1>Cadastro de Produto</h1>
+        <form id="product-form">
+            <label for="product-name">Nome do Produto:</label>
+            <input type="text" id="product-name" class="form-input" required>
+
+            <label for="product-description">Descrição do Produto:</label>
+            <textarea id="product-description" class="form-input" required></textarea>
+
+            <label for="product-value">Valor (R$):</label>
+            <input type="number" id="product-value" class="form-input" step="0.01" required>
+
+            <label for="product-available">Disponibilidade:</label>
+            <select id="product-available" class="form-input" required>
+                <option value="sim">SIM</option>
+                <option value="não">NÃO</option>
+            </select>
+
+            <button type="submit" class="form-btn">Cadastrar Produto</button>
+        </form>
+        <!-- O botão agora exibe a lista de produtos na mesma página -->
+        <button id="new-product-btn" class="form-btn">Produtos Cadastrados</button>
+    </section>
+
+    <!-- Seção da lista de produtos -->
+    <section id="list-section" style="display:none;">
+        <h1>Lista de Produtos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Disponibilidade</th>
+                    <th>Descrição</th> 
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Os produtos serão inseridos aqui pelo JavaScript -->
+            </tbody>
+        </table>
+        <!-- O botão agora volta ao formulário para cadastrar um novo produto -->
+        <button id="view-list-btn" class="form-btn">Cadastrar novo produto</button>
+    </section>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
