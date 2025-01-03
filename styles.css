@@ -65,7 +65,7 @@ body {
 }
 
 button, .form-btn, #new-product-btn, #view-list-btn {
-    width: 50%;
+    width: 80%;
     padding: 15px;
     background-color: var(--cor-primaria); /* Cor de fundo padrão */
     border: none;
